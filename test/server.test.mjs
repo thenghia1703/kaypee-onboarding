@@ -78,6 +78,15 @@ test('explicit checked source is sent as a bounded excerpt and cited', async () 
   assert.match(lastRequest.messages[1].content, /status-visibility/);
   assert.ok(lastRequest.messages[1].content.length < 10000);
 });
+test('automatic search sends only matching checked sources, without chat history', async () => {
+  responseSourceIds = ['entity-map'];
+  const { response, body } = await ask({ question: 'Summarise status', sourceIds: ['entity-map'], sourceScope: 'search' });
+  assert.equal(response.status, 200);
+  assert.deepEqual(body.sources.map((source) => source.id), ['entity-map']);
+  assert.match(lastRequest.messages[1].content, /entity-map/);
+  assert.doesNotMatch(lastRequest.messages[1].content, /status-visibility/);
+  responseSourceIds = ['status-visibility'];
+});
 test('local notes can be context and citations, but invented citations are rejected', async () => {
   responseSourceIds = ['note-test-1'];
   const localNote = { id: 'note-test-1', title: 'My note', text: 'I checked this with my mentor.' };

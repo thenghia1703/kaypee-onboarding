@@ -1,4 +1,4 @@
-# Kaypee v2
+# Keypee v2
 
 A local HTML/CSS/JavaScript onboarding demo for a new Listing teammate. It starts with a four-step setup, then opens a five-day learning path, workbook-based Knowledge Hub, floating DeepSeek chat, and SOP Navigator with three demo workflows.
 
@@ -17,13 +17,13 @@ Open <http://127.0.0.1:4173>. Run `npm test` for API and citation checks.
 
 Google sign-in requires a Google Web OAuth client ID in `GOOGLE_CLIENT_ID` and `http://127.0.0.1:4173` in that client's authorized JavaScript origins. Without it, use the clearly labeled demo profile to preview all four steps. Google sign-in verifies identity only; the tool choices in step 4 are browser-stored demo preferences and do not access Gmail, Drive, Calendar, Jira, Confluence or chat. Those services need separate OAuth consent and integrations. Setup state uses `kaypee-onboarding-v1`; **Edit setup** reopens it from the app.
 
-The server binds to loopback and never serves `.env`. DeepSeek receives the question, recent Kaypee v2 conversation and at most four relevant sources total, including up to three related local notes. It does not receive the whole workbook or raw slide OCR. Citation IDs are checked against the supplied context before display. If DeepSeek returns plain text instead of JSON, only valid bracketed source IDs become citations; an uncited response remains explicitly uncited. The default model is `deepseek-flash`.
+The server binds to loopback and never serves `.env`. DeepSeek receives the question, recent Keypee v2 conversation and at most four relevant sources total, including up to three related local notes. It does not receive the whole workbook or raw slide OCR. Citation IDs are checked against the supplied context before display. If DeepSeek returns plain text instead of JSON, only valid bracketed source IDs become citations; an uncited response remains explicitly uncited. The default model is `deepseek-flash`.
 
 ## What is in the app
 
-- **Home / My learning:** One shared 0–5 progress count. A day completes after its source is marked read and its quick check is correct. The next day unlocks immediately. Continue resumes the current learning day or last SOP plan. Each completed day gets a source-based recap and editable reflection. Preparing a check-in creates an agenda and a Google Calendar event draft with the proposed time; the user adds attendees and saves it in Calendar. A daily log lets the user return to earlier check-ins. Kaypee records only user-marked booking and recap status, never a verified Calendar booking or manager approval.
+- **Home / My learning:** One shared 0–5 progress count. A day completes after its source is marked read and its quick check is correct. The next day unlocks immediately. Continue resumes the current learning day or last SOP plan. Each completed day gets a source-based recap and editable reflection. Preparing a check-in creates an agenda and a Google Calendar event draft with the proposed time; the user adds attendees and saves it in Calendar. A daily log lets the user return to earlier check-ins. Keypee records only user-marked booking and recap status, never a verified Calendar booking or manager approval.
 - **Knowledge Hub:** Search checked excerpts, 54 original workbook cells, 26 embedded slides and local notes. Slide OCR is searchable but is labelled for visual verification and is not sent to AI as source text. Add/edit notes and links locally; related note excerpts can be AI context.
-- **Kaypee mini:** Floating chat on desktop and a bottom sheet on mobile. Hub Ask, checked-source Ask and mini share one conversation. The source viewer offers a contextual Ask action; workbook images open in an enlarged, keyboard-accessible viewer.
+- **Keypee mini:** Floating chat on desktop and a bottom sheet on mobile. Hub Ask, checked-source Ask and mini share one conversation. The source viewer offers a contextual Ask action; workbook images open in an enlarged, keyboard-accessible viewer.
 - **SOP Navigator:** Feature launch, issue investigation and data analysis templates, with editable task name, step progress, blockers and a manager review draft. These are generic demo workflows, not approved SOPs.
 
 The source workbook is `Knowledge Base Listing.xlsx`, sheet `Listing_Knowledge`. `workbook-sources.json` retains cell coordinates, original links, image anchors and OCR. The checked learning excerpts in `content.json` cite exact cells or slides; no source date or approval metadata was supplied. More complex stock material stays in the Hub for direct inspection.

@@ -300,7 +300,7 @@ function renderKnowledge() {
   const cells = filter === 'all' || filter === 'workbook' ? workbook.cells.filter((cell) => cell.text && matching(`${cell.cell} ${cell.text}`, q)).slice(0, q ? 18 : 5) : [];
   const images = filter === 'all' || filter === 'workbook' ? workbook.images.filter((image) => matching(`${image.anchor} ${imageTopic(image)} ${image.ocr.join(' ')}`, q)).slice(0, q ? 12 : 5) : [];
   const cards = [];
-  checked.forEach((item) => cards.push(`<article class="resource-card"><span class="resource-type">${esc(item.type)}</span><strong>${esc(item.title)}</strong><p>${esc(item.summary)}</p><small>${esc(item.sourceRef)}</small><div class="card-actions"><button class="tiny-button" data-doc="${esc(item.id)}">Open source</button><button class="tiny-button" data-ask-source="${esc(item.id)}" ${aiReady ? '' : 'disabled'}>Ask</button></div></article>`));
+  checked.forEach((item) => cards.push(`<article class="resource-card"><span class="resource-type">${esc(item.type)}</span><strong>${esc(item.title)}</strong><p>${esc(item.summary)}</p><small>${esc(item.sourceRef)}</small><div class="card-actions"><button class="tiny-button" data-doc="${esc(item.id)}">Open source</button></div></article>`));
   notes.forEach((note) => cards.push(`<article class="resource-card"><span class="resource-type">Your local note</span><strong>${esc(note.title)}</strong><p>${esc(note.text.slice(0, 160))}</p><div class="card-actions"><button class="tiny-button" data-note-open="${esc(note.id)}">Open</button><button class="tiny-button" data-note-edit="${esc(note.id)}">Edit</button><button class="tiny-button" data-note-delete="${esc(note.id)}">Delete</button></div></article>`));
   cells.forEach((cell) => cards.push(`<article class="resource-card"><span class="resource-type">Workbook cell · original</span><strong>${esc(cell.id)}</strong><p>${esc(cell.text.slice(0, 180))}</p><div class="card-actions"><button class="tiny-button" data-cell="${esc(cell.id)}">View cell</button></div></article>`));
   images.forEach((image) => {
@@ -553,12 +553,8 @@ document.addEventListener('click', (event) => {
   if (button.dataset.image) return openImage(button.dataset.image);
   if (button.dataset.noteOpen) return openNote(button.dataset.noteOpen);
   if (button.dataset.noteEdit) return editNote(button.dataset.noteEdit);
-  if (button.dataset.noteDelete) { state.notes = state.notes.filter((note) => note.id !== button.dataset.noteDelete); save(); return renderKnowledge(); }
+  if (button.dataset.noteDelete) { state.notes = state.notes.filter((note) => note.id !== button.dataset.noteDelete); save(); renderKnowledge(); return scheduleKnowledgeAnswer(); }
   if (button.id === 'add-knowledge') return editNote();
-  if (button.dataset.askSource) {
-    const source = doc(button.dataset.askSource);
-    return sendQuestion(`Summarise the key points from ${source.title} and what I should verify next.`, [source.id], true);
-  }
   if (button.id === 'retry-hub') return scheduleKnowledgeAnswer(0);
   if (button.dataset.followup) { openChat(); $('#chat-question').value = button.dataset.followup; $('#chat-question').focus(); return; }
   if (button.id === 'open-calendar') {
@@ -620,7 +616,7 @@ $('#note-form').addEventListener('submit', (event) => {
   const note = { id, title: form.elements.title.value.trim(), text: form.elements.text.value.trim(), link: form.elements.link.value.trim() };
   if (!note.title || !note.text) return;
   state.notes = [...state.notes.filter((item) => item.id !== id), note];
-  save(); closeDialog('note-dialog'); renderKnowledge();
+  save(); closeDialog('note-dialog'); renderKnowledge(); scheduleKnowledgeAnswer();
 });
 $('#sop-form').addEventListener('submit', (event) => {
   event.preventDefault();

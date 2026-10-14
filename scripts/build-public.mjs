@@ -13,4 +13,4 @@ const html = await readFile(path.join(out, 'index.html'), 'utf8');
 for (const pathName of ['app.js', 'onboarding.js', 'styles.css', 'onboarding.css']) {
   if (!html.includes(pathName)) throw new Error(`Missing asset reference: ${pathName}`);
 }
-console.log('Built Kaypee public assets.');
+console.log('Built Keypee public assets.');

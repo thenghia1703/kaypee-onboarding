@@ -280,10 +280,10 @@
     },
     {
       "id": "kaypee-capabilities",
-      "title": "What Kaypee can do",
+      "title": "What Keypee can do",
       "type": "App guide",
-      "sourceRef": "Kaypee v2",
-      "owner": "Kaypee demo",
+      "sourceRef": "Keypee v2",
+      "owner": "Keypee demo",
       "updated": "App version",
       "summary": "Learn by day, search workbook sources, draft a task plan and ask DeepSeek.",
       "tags": [
@@ -295,7 +295,7 @@
       "sections": [
         {
           "heading": "In this prototype",
-          "body": "Kaypee has a five-day learning path, a searchable workbook-based Knowledge Hub, a local notes collection, an AI chat, and three demo task workflows. EOD and manager review forms are local drafts only. No company systems or calendar are connected."
+          "body": "Keypee has a five-day learning path, a searchable workbook-based Knowledge Hub, a local notes collection, an AI chat, and three demo task workflows. EOD and manager review forms are local drafts only. No company systems or calendar are connected."
         }
       ]
     }
