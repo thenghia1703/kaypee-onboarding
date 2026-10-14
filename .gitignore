@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.dev.vars*
+.DS_Store
+node_modules/
+.data/
+public/
+.wrangler/
+*.sqlite*
+*.log
+*.zip
+exports/
+/SESSION_HANDOFF.md
+/kaypee-v2-preview.png
+/onboarding-step-*-preview.png

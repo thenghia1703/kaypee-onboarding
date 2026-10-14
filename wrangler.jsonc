@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kaypee-onboarding",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-13",
+  "account_id": "d4ba98535d371458a07ff99771d96085",
+  "assets": { "directory": "./public", "binding": "ASSETS", "run_worker_first": true },
+  "vars": { "GOOGLE_CLIENT_ID": "370339055337-t7vabgqhoq9cb9lgmcf24p92g7vplrhb.apps.googleusercontent.com" },
+  "d1_databases": [{ "binding": "DB", "database_name": "kaypee-user-state", "database_id": "d14b8839-b20e-46a5-9cd4-a6e4aeb058b9" }]
+}

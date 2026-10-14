@@ -1,0 +1,404 @@
+{
+  "persona": {
+    "name": "Alex",
+    "role": "New Product Manager",
+    "productLine": "Listing"
+  },
+  "demoLabel": "Workbook learning notes. Source dates and approval status were not supplied; verify operational decisions with the current owner.",
+  "learning": [
+    {
+      "id": "day-1",
+      "number": "01",
+      "title": "Listing journey & item",
+      "summary": "Follow an item from seller input through validation, QC and buyer surfaces.",
+      "duration": "15 min",
+      "docIds": [
+        "journey-item"
+      ],
+      "check": {
+        "question": "What happens before listing content is distributed to buyer surfaces in the workbook journey?",
+        "options": [
+          "Upload validation and Listing QC",
+          "Only a manager check-in",
+          "A stock reservation"
+        ],
+        "answer": 0,
+        "explanation": "The diagram places validation and QC before downstream distribution."
+      }
+    },
+    {
+      "id": "day-2",
+      "number": "02",
+      "title": "Status & visibility",
+      "summary": "Separate item status from what buyers can see.",
+      "duration": "12 min",
+      "docIds": [
+        "status-visibility"
+      ],
+      "check": {
+        "question": "Which status is shown in search in the workbook visibility table?",
+        "options": [
+          "Normal",
+          "Banned",
+          "Reviewing"
+        ],
+        "answer": 0,
+        "explanation": "The checked buyer visibility table marks Normal as visible in search."
+      }
+    },
+    {
+      "id": "day-3",
+      "number": "03",
+      "title": "Category & product data",
+      "summary": "Learn where category, attributes, images and variations fit.",
+      "duration": "14 min",
+      "docIds": [
+        "category-data"
+      ],
+      "check": {
+        "question": "What should you inspect when a product is in an unexpected buyer category?",
+        "options": [
+          "The BE category and its attributes",
+          "Only the stock number",
+          "Only the manager calendar"
+        ],
+        "answer": 0,
+        "explanation": "The workbook connects buyer-facing FE category to BE category and attributes."
+      }
+    },
+    {
+      "id": "day-4",
+      "number": "04",
+      "title": "Merchant, MP, MT & VSKU",
+      "summary": "Map the entities before interpreting a cross-shop issue.",
+      "duration": "15 min",
+      "docIds": [
+        "entity-map"
+      ],
+      "check": {
+        "question": "According to the workbook note, one merchant can have what?",
+        "options": [
+          "Multiple shops",
+          "Only one shop",
+          "No shop"
+        ],
+        "answer": 0,
+        "explanation": "Cell AC52 states one merchant can have many shops."
+      }
+    },
+    {
+      "id": "day-5",
+      "number": "05",
+      "title": "Stock basics",
+      "summary": "Distinguish sellable, reserved and locked stock.",
+      "duration": "15 min",
+      "docIds": [
+        "stock-basics"
+      ],
+      "check": {
+        "question": "What is the workbook's basic available stock calculation?",
+        "options": [
+          "Sellable − reserved − locked, if applicable",
+          "Sellable + reserved + locked",
+          "Reserved alone"
+        ],
+        "answer": 0,
+        "explanation": "The checked stock slide and B94 use this relationship."
+      }
+    }
+  ],
+  "docs": [
+    {
+      "id": "journey-item",
+      "title": "Listing journey and item",
+      "type": "Workbook · checked slide",
+      "sourceRef": "Listing_Knowledge!image-01 · A1; B1; B24",
+      "imagePath": "/assets/workbook/image-01.png",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "Seller input, validation, Listing creation, QC and downstream content distribution.",
+      "tags": [
+        "journey",
+        "item",
+        "seller",
+        "listing",
+        "qc",
+        "validation",
+        "day 1"
+      ],
+      "sections": [
+        {
+          "heading": "The journey shown in the slide",
+          "body": "Product information enters through seller-facing inputs, passes upload validation, is stored as a Listing item, and goes through Listing quality checks. Passing QC leads to content distribution to buyer surfaces; QC failure leads to treatment. The slide also shows later content optimisation."
+        },
+        {
+          "heading": "How to use this",
+          "body": "When investigating an item, locate the seller input, validation result, current status, QC outcome and affected buyer surface."
+        }
+      ]
+    },
+    {
+      "id": "status-visibility",
+      "title": "Item status and buyer visibility",
+      "type": "Workbook · checked slide",
+      "sourceRef": "Listing_Knowledge!J16; image-05 · R2; image-06 · X1",
+      "imagePath": "/assets/workbook/image-06.png",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "Normal status appears in search; other statuses have different buyer-surface visibility.",
+      "tags": [
+        "status",
+        "visibility",
+        "search",
+        "buyer",
+        "normal",
+        "banned",
+        "qc",
+        "day 2"
+      ],
+      "sections": [
+        {
+          "heading": "Status and visibility are different questions",
+          "body": "The workbook note says item status mainly reflects the item's position in QC. The checked table marks Normal visible in search, recommendations, shop and PDP. Reviewing, banned, deleted and blacklisted entries are not shown in those surfaces in this table."
+        },
+        {
+          "heading": "A useful investigation question",
+          "body": "Ask for the exact item status and affected surface. Do not assume a seller-visible item is searchable by buyers."
+        }
+      ]
+    },
+    {
+      "id": "category-data",
+      "title": "Category and product data",
+      "type": "Workbook · checked cells",
+      "sourceRef": "Listing_Knowledge!B44; B119; H119; R119; X119",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "BE category, buyer-facing FE category, attributes and listing fields.",
+      "tags": [
+        "category",
+        "attribute",
+        "product",
+        "image",
+        "variation",
+        "buyer",
+        "day 3"
+      ],
+      "sections": [
+        {
+          "heading": "Category roles",
+          "body": "The workbook distinguishes BE/Global Category, used as a seller-side convention across regions, from FE/Local/Display Category, used by buyers and promotions. It notes that attributes can narrow a category and may be mandatory or optional."
+        },
+        {
+          "heading": "Product fields",
+          "body": "The item notes list images, variations and price among data to inspect. Category selection reaches an end leaf node in the workbook example; actual depth depends on the category tree."
+        }
+      ]
+    },
+    {
+      "id": "entity-map",
+      "title": "Merchant, marketplace SKU and merchant SKU",
+      "type": "Workbook · checked cells",
+      "sourceRef": "Listing_Knowledge!AC52; AF52; Q53; R96",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "Merchant, shop, MP and MT SKU relationships, plus the basic VSKU idea.",
+      "tags": [
+        "merchant",
+        "shop",
+        "mpsku",
+        "mtsku",
+        "vsku",
+        "cross shop",
+        "day 4"
+      ],
+      "sections": [
+        {
+          "heading": "Entity links in the notes",
+          "body": "Cell AC52 says one merchant can have many shops and MT SKUs. Cell AF52 describes MT SKU as a physical item and says one MT SKU can map to many MP SKUs. Q53 describes a shop as an online store that does not cross markets and MP SKU as the marketplace listing management unit."
+        },
+        {
+          "heading": "Before debugging",
+          "body": "Identify which shop, MP listing and MT item the question refers to. Read the original VSKU and supplier notes before applying those rules to a real case."
+        },
+        {
+          "heading": "VSKU at a glance",
+          "body": "Cell R96 describes a VSKU as a virtual item combining multiple real SKUs into a package. Treat the detailed composition and fulfilment limits as source-specific material to confirm with the current owner."
+        }
+      ]
+    },
+    {
+      "id": "stock-basics",
+      "title": "Stock basics: sellable, reserved and locked",
+      "type": "Workbook · checked slide",
+      "sourceRef": "Listing_Knowledge!B94; image-20 · H66",
+      "imagePath": "/assets/workbook/image-20.png",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "A basic stock vocabulary and available quantity relationship.",
+      "tags": [
+        "stock",
+        "sellable",
+        "reserved",
+        "locked",
+        "available",
+        "day 5"
+      ],
+      "sections": [
+        {
+          "heading": "Three quantities",
+          "body": "The checked slide describes sellable as physical stock, reserved as stock held for promotions or virtual SKUs, and locked as stock held around order placement or sourcing. It distinguishes warehouse and seller location behaviour."
+        },
+        {
+          "heading": "Available",
+          "body": "The workbook expresses available stock as sellable minus reserved minus locked, where locked applies. Treat this as a learning model; use current system definitions for operational calculations."
+        }
+      ]
+    },
+    {
+      "id": "stock-advanced",
+      "title": "Advanced stock concepts",
+      "type": "Workbook · source pointers",
+      "sourceRef": "Listing_Knowledge!O86; O94; R96; image-19 · A65",
+      "imagePath": "/assets/workbook/image-19.png",
+      "owner": "Knowledge Base Listing.xlsx",
+      "updated": "Date not supplied",
+      "summary": "Reserved modes, shared stock, VSKU and partial fulfilment require separate review.",
+      "tags": [
+        "stock",
+        "advanced",
+        "shared",
+        "vsku",
+        "partial fulfilment"
+      ],
+      "sections": [
+        {
+          "heading": "Where to look next",
+          "body": "The workbook contains separate notes on fixed and floating reservation modes, MT/MP sharing, virtual SKU composition and partial fulfilment. These are complex and contain draft or conflict signals. Open the original cell and slide before using any rule for a decision."
+        }
+      ]
+    },
+    {
+      "id": "kaypee-capabilities",
+      "title": "What Kaypee can do",
+      "type": "App guide",
+      "sourceRef": "Kaypee v2",
+      "owner": "Kaypee demo",
+      "updated": "App version",
+      "summary": "Learn by day, search workbook sources, draft a task plan and ask DeepSeek.",
+      "tags": [
+        "kaypee",
+        "capabilities",
+        "help",
+        "what can you do"
+      ],
+      "sections": [
+        {
+          "heading": "In this prototype",
+          "body": "Kaypee has a five-day learning path, a searchable workbook-based Knowledge Hub, a local notes collection, an AI chat, and three demo task workflows. EOD and manager review forms are local drafts only. No company systems or calendar are connected."
+        }
+      ]
+    }
+  ],
+  "sopTemplates": {
+    "launch": {
+      "label": "Feature launch",
+      "steps": [
+        [
+          "Understand requirements",
+          "PM / Biz",
+          "Scope and questions",
+          "Read the brief, align success criteria and identify open decisions."
+        ],
+        [
+          "Align owners and dependencies",
+          "PM / Regional PM",
+          "Alignment notes",
+          "Confirm stakeholders, technical dependencies and proposed timeline."
+        ],
+        [
+          "Prepare UAT",
+          "PM / QA",
+          "Test plan",
+          "Draft cases and confirm test environment and access."
+        ],
+        [
+          "Run UAT",
+          "QA / PM",
+          "Results and issue log",
+          "Execute cases, log reproducible issues and retest."
+        ],
+        [
+          "Validate and sign off",
+          "Manager / PM",
+          "Review record",
+          "Bring the action plan and evidence to the manager checkpoint."
+        ],
+        [
+          "Roll out and monitor",
+          "PM / BI",
+          "Monitoring notes",
+          "Confirm rollout steps and watch agreed signals."
+        ]
+      ]
+    },
+    "investigation": {
+      "label": "Issue investigation",
+      "steps": [
+        [
+          "Gather evidence and impact",
+          "PM / Biz",
+          "Issue brief",
+          "Capture scope, expected versus actual behaviour and reproduction."
+        ],
+        [
+          "Triage and identify owner",
+          "PM / QA",
+          "Triage decision",
+          "Confirm severity and responsible team."
+        ],
+        [
+          "Investigate cause",
+          "Engineering / BI",
+          "Findings",
+          "Trace relevant flow and data with the owner."
+        ],
+        [
+          "Validate fix and communicate",
+          "QA / PM",
+          "Verified resolution",
+          "Retest and update stakeholders with evidence."
+        ]
+      ]
+    },
+    "analysis": {
+      "label": "Data analysis",
+      "steps": [
+        [
+          "Clarify the decision",
+          "PM / Biz",
+          "Analysis brief",
+          "Define the business question, metric, grain, filters and time window."
+        ],
+        [
+          "Check data access and quality",
+          "BI / IT",
+          "Data checklist",
+          "Confirm sources, permissions and data quality."
+        ],
+        [
+          "Analyse and sanity check",
+          "BI / PM",
+          "Findings",
+          "Validate calculations and edge cases."
+        ],
+        [
+          "Review recommendations",
+          "Manager / Biz",
+          "Decision summary",
+          "Discuss implications and next action with owners."
+        ]
+      ]
+    }
+  }
+}

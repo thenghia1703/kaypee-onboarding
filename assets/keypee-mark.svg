@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Keypee mascot">
+  <rect width="96" height="96" rx="25" fill="#eaf0ff"/>
+  <path d="M30 72c-3 6-1 13 5 15 5 2 10 0 13-4 3 4 8 6 13 4 6-2 8-9 5-15" fill="#ff792f" stroke="#d95118" stroke-width="2.5"/>
+  <path d="M76 53c9-5 13 1 10 8-2 5-7 8-13 7" fill="#ff792f" stroke="#d95118" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M29 20c4-9 11-12 17-9 5 3 5 8 2 12 19 0 31 14 31 32 0 19-13 31-32 31S16 73 16 55c0-16 6-27 17-32" fill="#ff792f" stroke="#d95118" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M23 58c0-13 13-22 29-22 14 0 23 8 23 20 0 15-11 24-27 24-15 0-25-8-25-22Z" fill="#fff"/>
+  <ellipse cx="38" cy="59" rx="3.2" ry="4.3" fill="#1d2426"/>
+  <ellipse cx="59" cy="55" rx="3.2" ry="4.3" fill="#1d2426"/>
+  <ellipse cx="30" cy="67" rx="5" ry="3" fill="#ffc5c6"/>
+  <ellipse cx="68" cy="63" rx="5" ry="3" fill="#ffc5c6"/>
+  <path d="M45 66c3 4 7 4 10-1" fill="none" stroke="#1d2426" stroke-width="2.8" stroke-linecap="round"/>
+  <rect x="41" y="79" width="17" height="7" rx="3.5" fill="#3366cc"/>
+  <path d="m80 29 3-7m4 14 5-2" stroke="#ffbc3f" stroke-width="5" stroke-linecap="round"/>
+</svg>
